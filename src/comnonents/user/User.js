@@ -4,7 +4,6 @@ import Posts from "../posts/Posts";
 function User({user}) {
     return (
         <div>
-            {console.log(`User work!`)}
             <h2>{user.name} - {user.id}</h2>
             <p>{user.email}</p>
             <div className={`Post`}>

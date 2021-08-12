@@ -10,7 +10,6 @@ function Users(props) {
     },[]);
     return (
         <div>
-            {console.log(`Users Work!`)}
             {users.map((user, index)=> <User user={user} key = {index} />)}
         </div>
     );

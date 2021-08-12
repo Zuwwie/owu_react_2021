@@ -1,8 +1,8 @@
-const url = `https://jsonplaceholder.typicode.com/`;
+const url = `https://jsonplaceholder.typicode.com/posts`;
 
 
 const getPostsFilter = () => {
-    return fetch(url + `posts`).then(value => value.json())
+    return fetch(url).then(value => value.json())
 }
 
 export {getPostsFilter}

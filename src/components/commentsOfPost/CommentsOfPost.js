@@ -11,7 +11,7 @@ function CommentsOfPost({value: post}) {
 
      useEffect(() => {
          console.log(`Comments work`)
-         getCommentsOfPost().then(value => setComments([...value]))
+         getCommentsOfPost(post.id).then(value => setComments([...value]))
          setComment(null)
          },[post]);
 

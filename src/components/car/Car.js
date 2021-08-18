@@ -14,7 +14,7 @@ function Car({car, dell}) {
         <div>
             <h3>{car.id} -- {car.model} --- {car.price} ---- {car.year}
                 <button onClick={() => dellThisCar()}>Dell</button>
-                <button onClick={()=>{}}>Edit car</button>
+                {/*<button onClick={()=>{}}>Edit car</button>*/}
             </h3>
         </div>
     );

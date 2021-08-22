@@ -3,7 +3,7 @@ import {dellCar, getCar} from "../../services/cars.services";
 import Car from "../car/Car";
 import Form from "../form/Form";
 
-function Cars(props) {
+function Cars() {
     let [cars,setCars] = useState([]);
 
 
@@ -31,7 +31,7 @@ function Cars(props) {
     return (
        <div>
            <form onSubmit={onDell}>
-               <input type="text"/>
+               <input type="text" placeholder='Enter ID' />
                <button type='submit' >Dell</button>
            </form>
 

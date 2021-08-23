@@ -1,26 +1,44 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    withRouter
+} from "react-router-dom";
+import Users from './components/users/Users'
+import Posts from './components/posts/Posts'
+import Comments from './components/comments/Comments'
+
+
 
 function App() {
-  return (
-    <div className="App">
-        123
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            <Router>
+               <div className={`flex`}>
+                   <Link to={`/`}>Home</Link>
+                   <Link to={`/users`}>Users</Link>
+                   <Link to={`/posts`}>Posts</Link>
+                   <Link to={`/comments`}>Comments</Link>
+               </div>
+                <hr/>
+                <br/>
+                <Switch>
+                    <Route exact path={`/`}>
+                        <div>hello</div>
+                        <h3>pls click to chose component</h3>
+                    </Route>
+                    <Route path={`/users`} component={Users}/>
+                    <Route path={`/posts`} component={Posts}/>
+                    <Route path={`/comments`} component={Comments}/>
+
+                </Switch>
+
+
+            </Router>
+        </div>
+    );
 }
 
 export default App;

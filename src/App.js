@@ -1,17 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import {useReducer} from "react";
+import reducer from "./reducer/reducer";
 
 
-const reducer =(state, action) => {
-    if (action.obg && action.do === `+10`)
-    {
-        return {...state,first: state.first+10}
-    } else if (action.obg && action.do === `-2`) {
-        return {...state, first: state.first-2}
-    }
-    return state
-}
+
 
 function App() {
     const [{first}, dispatch] = useReducer(reducer, {first: 0});

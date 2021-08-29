@@ -1,26 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import {useReducer} from "react";
+import reducer from "./redux/redux";
+
+
 
 function App() {
-  return (
-    <div className="App">
-        123
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [{a, b, c}, dispatch] = useReducer(reducer, {a: 0, b: 0, c: 0});
+
+    return (
+        <div>
+            <h1>{a}</h1>
+            <button onClick={() => dispatch({obj: `a`, do: `+`})}>Add</button>
+            <button onClick={() => dispatch({obj: `a`, do: `-`})}>Minus</button>
+            <h1>{b}</h1>
+            <button onClick={() => dispatch({obj: `b`, do: `+`})}>Add</button>
+            <button onClick={() => dispatch({obj: `b`, do: `-`})}>Minus</button>
+            <h1>{c}</h1>
+            <button onClick={() => dispatch({obj: `c`, do: `+`})}>Add</button>
+            <button onClick={() => dispatch({obj: `c`, do: `-`})}>Minus</button>
+
+        </div>
+    );
 }
 
 export default App;

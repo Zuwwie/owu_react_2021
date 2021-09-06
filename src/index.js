@@ -3,12 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {createStore} from 'redux'
+import {Provider} from 'react-redux'
+
+let initialState = {movies: []};
+const rootReducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'GET_MOVIES':
+            console.log('work_get', action.payload)
+            return {...state, movies: [...action.payload]}
+        default:
+            return state
+    }
+}
+
+
+let store = createStore(rootReducer);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <React.StrictMode>
+        <Provider store={store}>
+            <App/>
+        </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

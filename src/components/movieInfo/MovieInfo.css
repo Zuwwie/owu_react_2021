@@ -1,0 +1,58 @@
+.mainInfo {
+    height: 513px;
+    color: white;
+    margin: 24px 0;
+}
+
+.mainInfo img {
+    height: 450px;
+    width: 300px;
+
+}
+
+.flex {
+    box-sizing: border-box;
+    padding: 30px;
+    display: flex;
+}
+
+.right_block {
+    padding: 40px;
+}
+
+.mainInfo h2 {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 36px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+
+.mainInfo h2 span {
+    font-family: 'Source Sans Pro', Arial, sans-serif;
+    font-size: 24px;
+}
+
+.mainInfo .genres {
+    display: flex;
+    column-gap: 16px;
+    margin: 0;
+    font-size: 18px;
+}
+
+.mainInfo .tagline {
+    font-size: 24px;
+    font-family: "Al Bayan";
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.mainInfo .description {
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.styleBG {
+    background-image: linear-gradient(to right, rgba(13.73%, 2.35%, 1.57%, 0.80) 150px, rgba(13.73%, 2.35%, 1.57%, 0.84) 100%);
+}
+

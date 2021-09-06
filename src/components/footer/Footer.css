@@ -1,0 +1,11 @@
+.footer {
+    color: white;
+    background: #042541;
+    align-items: center;
+    vertical-align: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    margin-top: -80px;
+}

@@ -1,0 +1,18 @@
+.movieCard {
+    width: 23%;
+    padding: 10px;
+    text-align: center;
+    color: #042541;
+}
+
+img {
+    height: 220px;
+    width: 150px;
+}
+.movieCard a{
+    box-sizing: border-box;
+    margin: 0;
+    text-align: center;
+    width: 20%;
+    color: #042541;
+}

@@ -1,0 +1,18 @@
+.moviesList {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.link {
+    color: cornflowerblue;
+    font-size: 22px;
+    margin: 0 10px;
+}
+.selected {
+    color: blueviolet;
+    font-size: 28px;
+    margin: 0 5px;
+
+
+}

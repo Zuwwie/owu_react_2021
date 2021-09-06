@@ -15,15 +15,15 @@ import {
 function MoviesList() {
     let {movies} = useSelector(state => state)
     let {listId} = useParams('listId');
-    console.log(listId)
+    // console.log(listId)
     listId = parseInt(listId)
-    console.log(listId)
+    // console.log(listId)
 
     let dispatch = useDispatch();
 
     useEffect(() => {
         getMoviesList(listId).then(value => {
-                console.log(value)
+                // console.log(value)
                 dispatch({type: 'GET_MOVIES', payload: value.results})
             }
         )

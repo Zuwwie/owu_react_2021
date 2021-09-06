@@ -3,7 +3,7 @@ import MoviesList from "../moviesList/MoviesList";
 import {getMoviesList} from "../../services/movies.services";
 import {useParams} from "react-router";
 
-function MoviesPage(props) {
+function MoviesPage({handleToggle}) {
 
 
 

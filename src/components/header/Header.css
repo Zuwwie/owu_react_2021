@@ -13,3 +13,7 @@ a {
     color: white;
     text-decoration: none;
 }
+.theme {
+    color: red;
+    background-color: black;
+}

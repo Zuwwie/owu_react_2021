@@ -7,11 +7,11 @@ const instance = axios.create({
     }
 })
 
-const getMovies = () => instance.get('/discover/movie/').then(value => value.data);
+// const getMovies = () => instance.get('/discover/movie/').then(value => value.data);
 const getMoviesList = (id) => instance.get('/discover/movie/?page=' + id).then(value => value.data);
 
 
 const getInfo = (id) => instance.get(`/movie/` + id).then(value => value.data);
 
 
-export {getMovies, getInfo,getMoviesList}
+export {getInfo,getMoviesList}

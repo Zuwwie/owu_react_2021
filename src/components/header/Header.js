@@ -1,15 +1,7 @@
-import React, {useState} from 'react';
 import './Header.css'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link,
-    withRouter
-} from "react-router-dom";
+import {Link} from "react-router-dom";
 
 function Header({handleToggle, theme}) {
-    // console.log(theme)
     return (
         <div className={'header'}>
             <div>
@@ -19,7 +11,8 @@ function Header({handleToggle, theme}) {
                 <button onClick={handleToggle}>
                     {theme && <span>Light </span>}
                     {!theme && <span>Dark </span>}
-                     theme</button>
+                    theme
+                </button>
             </div>
         </div>
     );

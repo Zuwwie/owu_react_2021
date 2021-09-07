@@ -3,8 +3,8 @@ import {useParams} from "react-router";
 import {getInfo} from "../../services/movies.services";
 import './MovieInfo.css'
 
-function MovieInfo(props) {
-    let {id} = useParams('id');
+function MovieInfo() {
+    let {id} = useParams(`id`);
 
     let [info, setInfo] = useState({genres: [], poster_path: ``});
 
@@ -12,7 +12,6 @@ function MovieInfo(props) {
         getInfo(id).then(value => setInfo(value))
     }, [id]);
 
-    console.log(info)
     return (
         <div className={'mainInfo'} style={{
             backgroundImage: `url(${'https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces/' + info.backdrop_path})`
